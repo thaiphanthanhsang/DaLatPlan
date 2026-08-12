@@ -1,0 +1,84 @@
+@import 'tailwindcss';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+@theme {
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+
+  --color-background: #F3EEE1; /* Warm sand, not stark white */
+  --color-foreground: #2C3531;
+  --color-card: #FFFCF4; /* Warm ivory instead of pure white */
+  --color-card-foreground: #2C3531;
+  --color-primary: #1C4D39; /* Dark Forest Green */
+  --color-primary-foreground: #FFFFFF;
+  --color-secondary: #D9A05B; /* Warm brown/muted orange */
+  --color-secondary-foreground: #FFFFFF;
+  --color-muted: #E7DEC8; /* Warm sand-sage tint */
+  --color-muted-foreground: #6B6250;
+  --color-accent: #C25E30; /* Muted orange */
+  --color-accent-foreground: #FFFFFF;
+  --color-gold: #C99A3C; /* New highlight accent */
+  --color-gold-foreground: #2C3531;
+  --color-border: #E3D8BE;
+
+  --radius-lg: 1.5rem; /* 24px */
+  --radius-md: 1.125rem; /* 18px */
+  --radius-sm: 0.75rem; /* 12px */
+}
+
+@layer base {
+  :root {
+    --background: var(--color-background);
+    --foreground: var(--color-foreground);
+    --card: var(--color-card);
+    --card-foreground: var(--color-card-foreground);
+    --primary: var(--color-primary);
+    --primary-foreground: var(--color-primary-foreground);
+    --secondary: var(--color-secondary);
+    --secondary-foreground: var(--color-secondary-foreground);
+    --muted: var(--color-muted);
+    --muted-foreground: var(--color-muted-foreground);
+    --accent: var(--color-accent);
+    --accent-foreground: var(--color-accent-foreground);
+    --gold: var(--color-gold);
+    --gold-foreground: var(--color-gold-foreground);
+    --border: var(--color-border);
+    --gradient-sunset: linear-gradient(135deg, #C25E30 0%, #D9A05B 55%, #C99A3C 100%);
+    --gradient-forest: linear-gradient(135deg, #16392B 0%, #1C4D39 55%, #2F6B4F 100%);
+  }
+
+  body {
+    background-color: var(--background);
+    background-image:
+      radial-gradient(ellipse 90% 60% at 15% 0%, rgba(194, 94, 48, 0.16) 0%, transparent 55%),
+      radial-gradient(ellipse 80% 55% at 100% 15%, rgba(28, 77, 57, 0.14) 0%, transparent 55%),
+      linear-gradient(180deg, rgba(243, 238, 225, 0.93) 0%, rgba(243, 238, 225, 0.82) 35%, rgba(243, 238, 225, 0.95) 100%),
+      url('https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5?q=80&w=2400&auto=format&fit=crop');
+    background-size: cover;
+    background-position: top center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+  }
+}
+
+.glass-panel {
+  background: rgba(255, 252, 244, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.gradient-sunset {
+  background: var(--gradient-sunset);
+}
+
+.gradient-forest {
+  background: var(--gradient-forest);
+}

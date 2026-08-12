@@ -1,0 +1,10 @@
+{
+  "description": "Discover and plan a personalized 3-day itinerary in Dalat, featuring local attractions, food recommendations, and interactive maps for travelers.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

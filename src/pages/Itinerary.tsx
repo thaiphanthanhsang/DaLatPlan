@@ -14,14 +14,14 @@ const dayHero: Record<string, string> = {
 };
 
 const attractionImages: Record<string, string> = {
-  "Puppy Farm": "https://images.unsplash.com/photo-1694895070352-44c513812a2b?q=80&w=1200&auto=format&fit=crop",
-  "Floating Town": "https://images.unsplash.com/photo-1530483287673-ab2d5a643ec0?q=80&w=1200&auto=format&fit=crop",
-  "Mongo Land": "https://images.unsplash.com/photo-1760715138979-a0439b3e4721?q=80&w=1200&auto=format&fit=crop",
+  "Puppy Farm": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWTmwUC5L7DFPEjK8IxjmW-6LiiSPE4JHMw8IQgY8pAYkxSxYQNfp_xXI&s=10",
+  "Floating Town": "https://chothuexemaydalatgiare.com/wp-content/uploads/2025/12/floating-town-coffee-da-lat-hoi-tho-thuy-tran-giua-doi-nui-ta-nung-1.webp",
+  "Mongo Land": "https://i.imgur.com/p6RiQys.png",
   "Datanla": "https://images.unsplash.com/photo-1511936606692-5e0d73f6b638?q=80&w=1200&auto=format&fit=crop",
-  "Thiền viện Trúc Lâm → Hồ Tuyền Lâm": anh3,
+  "Thiền viện Trúc Lâm → Hồ Tuyền Lâm": "https://bazantravel.com/cdn/medias/uploads/50/50890-thien-vien-truc-lam-da-lat1-700x372.jpg",
   "Tuyến đi bộ": "https://dalatopentours.com/images/quang-truong-lam-vien.jpg",
-  "Chợ đêm": anh4,
-  "Café săn mây": "https://images.unsplash.com/photo-1764015732157-db88c520d4f3?q=80&w=1200&auto=format&fit=crop",
+  "Chợ đêm":"https://ik.imagekit.io/tvlk/blog/2023/01/cho-dem-da-lat-cover.jpg",
+  "Mây trên đỉnh đồi": "https://chothuexemaydalatgiare.com/wp-content/uploads/2025/09/tiem-ca-phe-tren-doi-co-may-chill-giua-bien-may-va-rung-thong-da-lat-5.webp",
 };
 
 const activityImgPosition: Record<string, string> = {

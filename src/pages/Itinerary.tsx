@@ -3,6 +3,7 @@ import { Clock, MapPin, Navigation, Info, Utensils, Heart } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import clsx from "clsx";
 import { foods } from "../data/foods";
+import { distanceKm, formatDistance } from "../lib/geo";
 import anh3 from "../assets/anh3.jpg";
 import anh4 from "../assets/anh4.jpg";
 
@@ -28,12 +29,25 @@ const activityImgPosition: Record<string, string> = {
   [anh4]: "50% 38%",
 };
 
+function cleanFoodLabel(raw: string): string {
+  let s = raw;
+  if (s.includes(": ")) s = s.split(": ").pop()!;
+  s = s.split(" – ")[0].split(" - ")[0].split(" (")[0].split(",")[0];
+  return s.trim().toLowerCase();
+}
+
+function findFood(text?: string) {
+  if (!text) return undefined;
+  const cleaned = cleanFoodLabel(text);
+  return foods.find((f) => {
+    const name = f.name.toLowerCase();
+    return cleaned.includes(name) || name.includes(cleaned);
+  });
+}
+
 function findActivityImage(title: string, primary?: string): string | undefined {
-  if (primary) {
-    const cleaned = primary.split(" – ")[0].split(",")[0].trim();
-    const match = foods.find((f) => cleaned.includes(f.name) || f.name.includes(cleaned));
-    if (match) return match.img;
-  }
+  const match = findFood(primary);
+  if (match) return match.img;
   return attractionImages[title];
 }
 
@@ -431,12 +445,32 @@ export function Itinerary() {
                       Option thay thế:
                     </div>
                     <ul className="space-y-2">
-                      {act.options.map((opt, i) => (
-                        <li key={i} className="flex items-start gap-2 text-sm text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition-colors">
-                          <span className="w-1.5 h-1.5 rounded-full bg-[var(--accent)] mt-1.5 shrink-0" />
-                          {opt}
-                        </li>
-                      ))}
+                      {act.options.map((opt, i) => {
+                        const optFood = findFood(opt);
+                        const primaryFood = findFood(act.primary);
+                        const dist = optFood && primaryFood ? distanceKm(optFood, primaryFood) : undefined;
+                        return (
+                          <li key={i} className="flex items-start gap-2 text-sm text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition-colors">
+                            <span className="w-1.5 h-1.5 rounded-full bg-[var(--accent)] mt-1.5 shrink-0" />
+                            <span className="flex-1">{opt}</span>
+                            {dist !== undefined && (
+                              <span
+                                className={clsx(
+                                  "shrink-0 text-[10px] font-semibold px-2 py-0.5 rounded-full whitespace-nowrap",
+                                  dist <= 0.3
+                                    ? "bg-green-500/15 text-green-600"
+                                    : dist <= 1
+                                    ? "bg-amber-500/15 text-amber-600"
+                                    : "bg-red-500/15 text-red-600"
+                                )}
+                                title="Khoảng cách so với món chính được khuyến nghị"
+                              >
+                                {dist <= 0.3 ? "Cùng tuyến" : dist <= 1 ? "Hơi lệch tuyến" : "Lệch tuyến"} · {formatDistance(dist)}
+                              </span>
+                            )}
+                          </li>
+                        );
+                      })}
                     </ul>
                   </div>
                 )}

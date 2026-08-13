@@ -2,12 +2,15 @@ import { NavLink, Outlet, useLocation } from "react-router";
 import { Compass, Calendar, Utensils, Map as MapIcon, Heart, Menu } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import clsx from "clsx";
+import { WelcomeAudio } from "./WelcomeAudio";
 
 export function Layout() {
   const location = useLocation();
 
   return (
     <div className="min-h-screen flex flex-col">
+      <WelcomeAudio />
+
       {/* Desktop Header */}
       <header className="hidden md:flex items-center justify-between px-8 py-4 sticky top-0 z-50 glass-panel border-b border-[var(--border)]">
         <div className="flex items-center gap-2">

@@ -1,3 +1,5 @@
+// Lưu ý: lat/lng là toạ độ ước lượng theo tên đường (chưa geocode chính xác 100%),
+// chỉ đủ dùng để so sánh khoảng cách tương đối giữa các quán trong nội ô Đà Lạt.
 export const foods = [
   {
     name: "Bánh mì xíu mại 79",
@@ -7,6 +9,8 @@ export const foods = [
     time: "06:00 - 10:00",
     img: "https://images.unsplash.com/photo-1647169953827-a7c85f324caf?q=80&w=1200&auto=format&fit=crop",
     tiktok: "https://www.tiktok.com/@qmthau/video/7225582100458638597",
+    lat: 11.9448,
+    lng: 108.4462,
   },
   {
     name: "Lẩu gà lá é Cao Phụng",
@@ -16,6 +20,8 @@ export const foods = [
     time: "15:00 - 23:00",
     img: "https://images.unsplash.com/photo-1611345157614-26d3bdd10c93?q=80&w=1200&auto=format&fit=crop",
     tiktok: "https://www.tiktok.com/@mipofoodholic/video/7458523248045657351",
+    lat: 11.9365,
+    lng: 108.4295,
   },
   {
     name: "Nem nướng Hùng Vân",
@@ -25,6 +31,8 @@ export const foods = [
     time: "09:00 - 21:00",
     img: "https://images.unsplash.com/photo-1564834724105-918b73d1b9e0?q=80&w=1200&auto=format&fit=crop",
     tiktok: "https://www.tiktok.com/@callmevyvo/video/7451543125803289864",
+    lat: 11.9328,
+    lng: 108.4372,
   },
   {
     name: "Bún bò 31 Lê Thánh Tôn",
@@ -34,6 +42,8 @@ export const foods = [
     time: "06:00 - 11:00",
     img: "https://images.unsplash.com/photo-1591814468924-caf88d1232e1?q=80&w=1200&auto=format&fit=crop",
     tiktok: "https://www.tiktok.com/@missayumy/video/7436987962694438151",
+    lat: 11.9276,
+    lng: 108.4305,
   },
   {
     name: "Bánh bèo hẻm 17/1 Bà Triệu",
@@ -42,6 +52,8 @@ export const foods = [
     address: "Hẻm 17/1 Bà Triệu, Đà Lạt",
     time: "14:00 - 19:00",
     img: "https://images.unsplash.com/photo-1496116218417-1a781b1c416c?q=80&w=1200&auto=format&fit=crop",
+    lat: 11.9487,
+    lng: 108.4432,
   },
   {
     name: "Bún riêu Kim Anh",
@@ -50,6 +62,8 @@ export const foods = [
     address: "14/2 Trần Phú, Đà Lạt",
     time: "07:00 - 14:00",
     img: "https://images.unsplash.com/photo-1585032226651-759b368d7246?q=80&w=1200&auto=format&fit=crop",
+    lat: 11.9432,
+    lng: 108.4468,
   },
   {
     name: "Bánh flan Tùng",
@@ -59,6 +73,8 @@ export const foods = [
     time: "08:00 - 22:00",
     img: "https://images.unsplash.com/photo-1488477181946-6428a0291777?q=80&w=1200&auto=format&fit=crop",
     tiktok: "https://www.tiktok.com/@nehedalat/video/7591500469701332245",
+    lat: 11.9459,
+    lng: 108.4396,
   },
   {
     name: "Café Tùng",
@@ -67,6 +83,8 @@ export const foods = [
     address: "6 Khu Hòa Bình, Phường 1, Đà Lạt",
     time: "07:00 - 22:00",
     img: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=1200&auto=format&fit=crop",
+    lat: 11.9459,
+    lng: 108.4396,
   },
   {
     name: "Dâu Tây Phúc Trinh",
@@ -76,6 +94,8 @@ export const foods = [
     time: "07:00 - 18:00",
     img: "https://images.unsplash.com/photo-1464965911861-746a04b4bca6?q=80&w=1200&auto=format&fit=crop",
     tiktok: "https://www.tiktok.com/@tranliendoanh_99/video/7470764042987130130",
+    lat: 11.9098,
+    lng: 108.4452,
   },
   {
     name: "Bánh căn 31 Nguyễn Trãi",
@@ -85,6 +105,8 @@ export const foods = [
     time: "06:00 - 10:00",
     img: "https://images.unsplash.com/photo-1677137261161-0095c10418ef?q=80&w=1200&auto=format&fit=crop",
     tiktok: "https://www.tiktok.com/@huyenanhnguyenz/photo/7566438995849366802",
+    lat: 11.9452,
+    lng: 108.4531,
   },
   {
     name: "Bún thịt nướng Bà Tám",
@@ -94,6 +116,8 @@ export const foods = [
     time: "10:00 - 20:00",
     img: "https://plus.unsplash.com/premium_photo-1695411123705-3a2157d517ad?q=80&w=1200&auto=format&fit=crop",
     tiktok: "https://www.tiktok.com/@tanhien_langtresosdalat/video/7087161907550965019",
+    lat: 11.9352,
+    lng: 108.4308,
   },
   {
     name: "Bánh canh cá lóc",
@@ -103,6 +127,8 @@ export const foods = [
     time: "09:00 - 21:00",
     img: "https://images.unsplash.com/photo-1597345637412-9fd611e758f3?q=80&w=1200&auto=format&fit=crop",
     tiktok: "https://www.tiktok.com/@tanhien_langtresosdalat/video/7077897530037636379",
+    lat: 11.933,
+    lng: 108.4369,
   },
   {
     name: "Chè Thái Lan cổ 1926",
@@ -112,6 +138,8 @@ export const foods = [
     time: "09:00 - 22:00",
     img: "https://images.unsplash.com/photo-1780131465996-ac030b440509?q=80&w=1200&auto=format&fit=crop",
     tiktok: "https://www.tiktok.com/@oilinhday/video/7576638875804667143",
+    lat: 11.9502,
+    lng: 108.4441,
   },
   {
     name: "Trà nhãn sen Dlume",
@@ -120,6 +148,8 @@ export const foods = [
     address: "Khu trung tâm Đà Lạt (đang cập nhật số nhà)",
     time: "08:00 - 22:00",
     img: "https://images.unsplash.com/photo-1760074057746-388f7e66c61e?q=80&w=1200&auto=format&fit=crop",
+    lat: 11.9455,
+    lng: 108.44,
   },
   {
     name: "Trà sữa Dulsis",
@@ -129,6 +159,8 @@ export const foods = [
     time: "08:00 - 22:00",
     img: "https://images.unsplash.com/photo-1747016804753-866c3ed6b3b7?q=80&w=1200&auto=format&fit=crop",
     tiktok: "https://www.tiktok.com/@pumxanhla/video/7572413546718366984",
+    lat: 11.9471,
+    lng: 108.4412,
   },
   {
     name: "Cháo lòng Bà Mén",
@@ -138,5 +170,7 @@ export const foods = [
     time: "05:30 - 10:00",
     img: "https://images.unsplash.com/photo-1766761562530-c8dd12c96d9a?q=80&w=1200&auto=format&fit=crop",
     tiktok: "https://www.tiktok.com/@bethanhne_02/video/7529395533014682887",
+    lat: 11.9463,
+    lng: 108.4404,
   },
 ];
